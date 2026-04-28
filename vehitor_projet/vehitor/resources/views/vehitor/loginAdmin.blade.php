@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-center my-5">
         <div class="bg-white p-5">
             <h2 class="text-center">
-                Se Connecter Comme Client
+                Se Connecter Comme Admin
             </h2>
             <form action="" method="post">
                 
@@ -30,7 +30,7 @@
                         Se Connecter
                     </button>
                     <br>
-                    <a href="{{route('registerClient')}}">pas de compte ?</a>
+                    <a href="{{route('registerAdmin')}}">pas de compte ?</a>
                 </div>
 
             </form>

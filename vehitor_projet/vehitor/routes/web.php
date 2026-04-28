@@ -17,3 +17,19 @@ Route::get('/loginClient', function(){
 Route::get('/loginAgence', function(){
     return view('vehitor.loginAgence');
 })->name('loginAgence'); //des route temporere va etre remplacer par les route ressources (controller)
+
+Route::get('/loginAdmin', function(){
+    return view('vehitor.loginAdmin');
+})->name('loginAdmin'); //des route temporere va etre remplacer par les route ressources (controller)
+
+Route::get('/registerClient', function(){
+    return view('vehitor.registerClient');
+})->name('registerClient');
+
+Route::get('/registerAgence', function(){
+    return view('vehitor.registerAgence');
+})->name('registerAgence');
+
+Route::get('/registerAdmin', function(){
+    return view('vehitor.registerAdmin');
+})->name('registerAdmin');

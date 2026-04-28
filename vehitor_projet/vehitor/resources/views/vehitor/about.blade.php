@@ -69,6 +69,10 @@
                                 <li>
                                     Je reçois des clients qualifiés, je gère mes réservations et je fais croître mon agence sereinement.
                                 </li>
+
+                                <li>
+                                    <a href="{{route('registerAgence')}}">Rejoindre maintenant</a>
+                                </li>
                             </ol>
 
                             <h6>Si Je Suis Un Client</h6>
@@ -83,6 +87,10 @@
 
                                 <li>
                                     Je récupère la voiture auprès de l'agence partenaire, je profite de mon trajet et je bénéficie d'un service après-location réactif si besoin.
+                                </li>
+
+                                <li>
+                                    <a href="{{route('registerClient')}}">Rejoindre maintenant</a>
                                 </li>
                             </ol>                        
                         </p>

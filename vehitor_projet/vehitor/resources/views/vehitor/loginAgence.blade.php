@@ -29,6 +29,8 @@
                     <button type="submit" class="btn btn-primary">
                         Se Connecter
                     </button>
+                    <br>
+                    <a href="{{route('registerAgence')}}">pas de compte ?</a>
                 </div>
 
             </form>

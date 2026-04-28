@@ -5,11 +5,16 @@
     <div class="d-flex justify-content-center my-5">
         <div class="bg-white p-5">
             <h2 class="text-center">
-                Se Connecter Comme Client
+                S'inscrire Comme Client
             </h2>
             <form action="" method="post">
                 
                 @csrf
+                <div class="pt-3">
+                    <label for="">Nom</label>
+                    <input type="text" name="name" id="" class="form-control">    
+                </div>
+
                 <div class="pt-3">
                     <label for="">Email</label>
                     <input type="text" name="email" id="" class="form-control">    
@@ -20,17 +25,17 @@
                     <input type="password" name="password" id="" class="form-control">    
                 </div>
 
-                <div class="pt-3" class="text-center d-flex mt-3">
-                    <p class="d-inline">Se Souvenir De Moi</p>
-                    <input type="checkbox" name="remember" id="" class="form-check-input">
+                <div class="pt-3">
+                    <label for="">confirmer le Mot De Passe</label>
+                    <input type="password" name="password_confirmation" id="" class="form-control">    
                 </div>
 
                 <div class="text-center mt-3">
                     <button type="submit" class="btn btn-primary">
-                        Se Connecter
+                        S'inscrire
                     </button>
                     <br>
-                    <a href="{{route('registerClient')}}">pas de compte ?</a>
+                    <a href="{{route('loginClient')}}">dèja un compte ?</a>
                 </div>
 
             </form>

@@ -48,4 +48,25 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // laison avec reservations
+    public function reservations(){
+        return $this->hasMany(Reservation::class, 'user_id');
+    }
+
+    // relation des clients avec leurs voitures
+    public function clientVehicules(){
+        return $this->hasManyThrough(Vehicule::class, Reservation::class, 'user_id', 'id', 'id', 'vehicule_id');
+    }
+
+    // relation des agences avec leurs voitures
+    public function AgenceVehicules(){
+        return $this->hasMany(Vehicule::class, 'vehicule_id');
+    }
+
+    // relation des client avec la facture
+    public function facture(){
+        return $this->hasManyThrough(Facture::class, Reservation::class);
+    }
+
 }

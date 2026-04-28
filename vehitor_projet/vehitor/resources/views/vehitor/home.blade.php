@@ -20,4 +20,12 @@
             </div>
         </div>
     </section>
+
+    <div class="my-5">
+        @include('vehitor.homeDashboard')
+    </div>
+
+    <div class="my-5">
+        @include('vehitor.homeAventages')
+    </div>
 @endsection
