@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\VehiculeController;
+use App\Models\Vehicule;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,3 +36,5 @@ Route::get('/registerAgence', function(){
 Route::get('/registerAdmin', function(){
     return view('vehitor.registerAdmin');
 })->name('registerAdmin');
+
+Route::resource('vehicules', VehiculeController::class);

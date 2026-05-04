@@ -28,4 +28,14 @@
     <div class="my-5">
         @include('vehitor.homeAventages')
     </div>
+    
+    <div class="shadow my-3 rounded bg-white d-flex justify-content-center align-items-center gap-3">
+        <div>
+            <img src="{{asset('images/vehitor_logo.png')}}" style="width: 100px; border-radius: 50%" alt="">
+        </div>
+        <div>
+            <p>veuillez nous <a href="#">Rejoindre</a> et vous bénéficiez de notre service d'incubation</p>
+        </div>
+    </div>
+
 @endsection

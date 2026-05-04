@@ -27,9 +27,35 @@
             animation: groun 2000ms ease infinite;
         }
 
+        .hoverCard{
+            background-color: white
+        }
+
+        .hoverCard:hover{
+            scale: 1.06;
+            transition: 700ms;
+            color: white;
+            background-color: #0d6efd
+        }
+
+        #hoverIcon{
+            color: white
+        }
+
+        .cardCars>article{
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 7px
+        }
+
         @media screen and (max-width: 768px){
             .margTopContent{
                 padding-top: 20%;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .cardCars{
+                display: block; 
             }
         }
         @keyframes logoMoving{

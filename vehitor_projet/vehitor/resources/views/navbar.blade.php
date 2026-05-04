@@ -2,13 +2,13 @@
     <div class="d-flex justify-content-between align-items-center border-bottom">
         <div>
             <a href="{{route('home')}}">
-                <img src="images/vehitor_logo.png" style="width: 100px" alt="">
+                <img src="{{asset('images/vehitor_logo.png')}}" style="width: 100px" alt="">
             </a>
         </div>
         
         <div class="d-md-flex d-none align-items-center gap-3 me-1">
             <div><a href="{{route('home')}}" class="text-decoration-none text-dark">Acceuil</a></div>
-            <div><a href="#" class="text-decoration-none text-dark">Véhicules</a></div>
+            <div><a href="{{route('vehicules.index')}}" class="text-decoration-none text-dark">Véhicules</a></div>
             <div><a href="{{route('about')}}" class="text-decoration-none text-dark">A propos</a></div>
             <div><a href="{{route('loginClient')}}" class="btn btn-primary">Entrer Comme Client</a></div>
             <div><a href="{{route('loginAgence')}}" class="btn btn-secondary">Entrer Comme Agence</a></div>
@@ -26,7 +26,7 @@
     <div class="d-md-none border-bottom menu">
         <center>
             <div class="p-3"><a href="{{route('home')}}" class="text-decoration-none text-dark">Acceuil</a></div>
-            <div><a href="#" class="text-decoration-none text-dark">Véhicules</a></div>
+            <div><a href="{{route('vehicules.index')}}" class="text-decoration-none text-dark">Véhicules</a></div>
             <div class="p-3"><a href="{{route('about')}}" class="text-decoration-none text-dark">A propos</a></div>
             <div class="p-3"><a href="{{route('loginClient')}}" class="btn w-100 btn-primary">Entrer Comme Client</a></div>
             <div class="p-3"><a href="{{route('loginAgence')}}" class="w-100 btn btn-secondary">Entrer Comme Agence</a></div>

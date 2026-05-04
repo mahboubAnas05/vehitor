@@ -35,7 +35,7 @@
     <div class="col-md-3 d-md-flex align-items-center gap-1">
         <div>
             <a href="{{route('home')}}">
-                <img src="images/vehitor_logo.png" style="width: 100px; border-radius: 50%;" alt="">
+                <img src="{{asset('images/vehitor_logo.png')}}" style="width: 100px; border-radius: 50%;" alt="">
             </a>
         </div>
         <div>

@@ -5,15 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Vehicule;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class VehiculeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+    
+        $query = Vehicule::where('user_id', auth()->id());
+
+        if($request->filled('categorie')){
+            $categorie = $request->input('categorie');
+            $query->where('categorie', 'LIKE', "$categorie%");
+        }
+
+        $vehicules = $query->get();
+
+        return view('vehicules.index', compact('vehicules'));
     }
 
     /**
@@ -22,6 +33,7 @@ class VehiculeController extends Controller
     public function create()
     {
         //
+        return view('vehicules.create');
     }
 
     /**
@@ -37,7 +49,11 @@ class VehiculeController extends Controller
      */
     public function show(Vehicule $vehicule)
     {
-        //
+        // si l'utilisateur est authentifié
+        if($vehicule->user_id !== auth()->id()){
+            abort(403);
+        }
+        return view('vehicules.show', compact('vehicule'));
     }
 
     /**
@@ -46,6 +62,11 @@ class VehiculeController extends Controller
     public function edit(Vehicule $vehicule)
     {
         //
+        if($vehicule->user_id !== auth()->id()){
+            abort(403);
+        }
+        return view('vehicules.edit', compact('vehicule'));
+        
     }
 
     /**
@@ -62,5 +83,15 @@ class VehiculeController extends Controller
     public function destroy(Vehicule $vehicule)
     {
         //
+        if($vehicule->user_id !== auth()->id()){
+            abort(403);
+        }
+
+        if($vehicule->photo){
+            Storage::disk('public')->delete($vehicule->photo);
+        }
+
+        $vehicule->delete();
+        return redirect()->route('vehicules.index')->with('status', 'suppression avec success');
     }
 }
